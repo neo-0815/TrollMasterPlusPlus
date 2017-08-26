@@ -1,0 +1,29 @@
+name: TrollMasterPlusPlus
+version: 1.0
+main: tmpp.main.Main
+description: Ein TrollPlugin
+author: neo_0815
+authors: [oktobertim]
+website: https://www.youtube.com/channel/UCnlyYB0LbNC5G6XBw-8xP1g
+
+commands:
+     trollmode:
+          description: Aktiviert den Trollmode.
+          usage: /trollmode
+          aliases: [tm]
+     trollmodeoff:
+          description: Deaktiviert den Trollmode.
+          usage: /trollmodeoff
+          aliases: [tmoff ,tmo]
+     trollspawn:
+          description: Spawnt das angegebene Entity.
+          usage: /trollspawn <Entity>
+          aliases: [trollsummon ,ts ,tmspawn ,tmsummon]
+     trolljoin:
+          description: Spawnt das angegebene Entity.
+          usage: /trolljoin <Name>
+          aliases: [tj ,tmjion ,tmj]
+     trollleave:
+          description: Spawnt das angegebene Entity.
+          usage: /trollleave <Name>
+          aliases: [tl ,tmleave ,tml]
