@@ -1,4 +1,4 @@
-package tmpp.main;
+package tmpp;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +21,7 @@ import tmpp.listener.DeathListener;
 import tmpp.listener.JoinListener;
 import tmpp.listener.QuitListener;
 
-public class Main extends JavaPlugin {
+public class TrollMasterPlusPlus extends JavaPlugin {
 
 	public static String pr = "§8[§4TMPP§8] ";
 	public static String noperm = pr + "§cDazu hast du keine Berechtigung!";

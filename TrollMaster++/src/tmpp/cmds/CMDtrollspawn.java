@@ -23,7 +23,7 @@ import org.bukkit.entity.Wither;
 import org.bukkit.entity.Wolf;
 import org.bukkit.entity.Zombie;
 
-import tmpp.main.Main;
+import tmpp.TrollMasterPlusPlus;
 
 public class CMDtrollspawn implements CommandExecutor {
 
@@ -34,7 +34,7 @@ public class CMDtrollspawn implements CommandExecutor {
 			Player p = (Player) sender;
 
 			if(!p.hasPermission("tmpp.trollspawn")) {
-				p.sendMessage(Main.noperm);
+				p.sendMessage(TrollMasterPlusPlus.noperm);
 
 				return true;
 			}else {
@@ -55,13 +55,13 @@ public class CMDtrollspawn implements CommandExecutor {
 
 					if(p.hasPermission("tmpp.trollspawn.danger")) {
 						if(arg2 == -1) mobChooserA(arg1, p, world, loc);
-						else if(arg2 == 0) p.sendMessage(Main.pr + "Bitte gib die Anzahl vom Entity \"" + arg1 + "\" an!");
+						else if(arg2 == 0) p.sendMessage(TrollMasterPlusPlus.pr + "Bitte gib die Anzahl vom Entity \"" + arg1 + "\" an!");
 						else if(arg2 >= 1 && arg2 <= 30) while(arg2 != 0) {
 							mobChooserA(arg1, p, world, loc);
 							arg2--;
 						}
 					}else if(arg2 == -1) mobChooserB(arg1, p, world, loc);
-					else if(arg2 == 0) p.sendMessage(Main.pr + "Bitte gib die Anzahl vom Entity \"" + arg1 + "\" an!");
+					else if(arg2 == 0) p.sendMessage(TrollMasterPlusPlus.pr + "Bitte gib die Anzahl vom Entity \"" + arg1 + "\" an!");
 					else if(arg2 >= 1 && arg2 <= 10) while(arg2 != 0) {
 						mobChooserB(arg1, p, world, loc);
 						arg2--;

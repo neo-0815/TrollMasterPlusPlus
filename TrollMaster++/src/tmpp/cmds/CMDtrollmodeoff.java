@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import tmpp.main.Main;
+import tmpp.TrollMasterPlusPlus;
 
 public class CMDtrollmodeoff implements CommandExecutor {
 
@@ -18,25 +18,25 @@ public class CMDtrollmodeoff implements CommandExecutor {
 		if(cmd.getName().equalsIgnoreCase("trollmodeoff")) if(sender instanceof Player) {
 			Player p = (Player) sender;
 			if(!p.hasPermission("tmpp.trollmode")) {
-				p.sendMessage(Main.noperm);
+				p.sendMessage(TrollMasterPlusPlus.noperm);
 
 				return true;
 			}else if(args.length != 0) return false;
 			else {
-				p.sendMessage(Main.pr + "§7Trollmode deaktiviert.");
+				p.sendMessage(TrollMasterPlusPlus.pr + "§7Trollmode deaktiviert.");
 
 				Collection<? extends Player> targets = Bukkit.getServer().getOnlinePlayers();
 
 				for(Player targetPlayer : targets)
 					targetPlayer.showPlayer(p);
 
-				Main.loadInv(p);
+				TrollMasterPlusPlus.loadInv(p);
 
 				p.setGameMode(Bukkit.getDefaultGameMode());
 
-				Main.loadArmor(p);
+				TrollMasterPlusPlus.loadArmor(p);
 
-				Main.trollPlayers.remove(p);
+				TrollMasterPlusPlus.trollPlayers.remove(p);
 			}
 		}
 

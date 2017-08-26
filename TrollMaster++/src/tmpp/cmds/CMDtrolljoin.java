@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import tmpp.main.Main;
+import tmpp.TrollMasterPlusPlus;
 
 public class CMDtrolljoin implements CommandExecutor {
 
@@ -18,7 +18,7 @@ public class CMDtrolljoin implements CommandExecutor {
 		if(cmd.getName().equalsIgnoreCase("trolljoin")) if(sender instanceof Player) {
 			Player p = (Player) sender;
 
-			if(!p.hasPermission("tmpp.trolljoin")) p.sendMessage(Main.noperm);
+			if(!p.hasPermission("tmpp.trolljoin")) p.sendMessage(TrollMasterPlusPlus.noperm);
 			else if(args.length != 1) return false;
 			else if(Bukkit.getOnlinePlayers().contains(Bukkit.getPlayer(args[0]))) {
 				Collection<? extends Player> targets = Bukkit.getServer().getOnlinePlayers();

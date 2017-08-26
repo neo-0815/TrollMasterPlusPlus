@@ -15,7 +15,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import tmpp.main.Main;
+import tmpp.TrollMasterPlusPlus;
 
 public class CMDtrollmode implements CommandExecutor {
 
@@ -25,20 +25,20 @@ public class CMDtrollmode implements CommandExecutor {
 		if(cmd.getName().equalsIgnoreCase("trollmode")) if(sender instanceof Player) {
 			Player p = (Player) sender;
 			if(!p.hasPermission("tmpp.trollmode")) {
-				p.sendMessage(Main.noperm);
+				p.sendMessage(TrollMasterPlusPlus.noperm);
 
 				return true;
 			}else if(args.length != 0) return false;
 			else {
-				p.sendMessage(Main.pr + "§7Trollmode aktiviert.");
+				p.sendMessage(TrollMasterPlusPlus.pr + "§7Trollmode aktiviert.");
 
 				Collection<? extends Player> targets = Bukkit.getServer().getOnlinePlayers();
 
 				for(Player targetPlayer : targets)
 					targetPlayer.hidePlayer(p);
 
-				Main.saveInv(p);
-				Main.saveArmor(p);
+				TrollMasterPlusPlus.saveInv(p);
+				TrollMasterPlusPlus.saveArmor(p);
 
 				ItemStack sword = new ItemStack(Material.DIAMOND_SWORD);
 				ItemStack bow = new ItemStack(Material.BOW);
@@ -92,7 +92,7 @@ public class CMDtrollmode implements CommandExecutor {
 
 				p.setGameMode(GameMode.CREATIVE);
 
-				Main.trollPlayers.add(p);
+				TrollMasterPlusPlus.trollPlayers.add(p);
 			}
 		}
 

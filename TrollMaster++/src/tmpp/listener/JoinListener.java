@@ -6,7 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import tmpp.main.Main;
+import tmpp.TrollMasterPlusPlus;
 
 public class JoinListener implements Listener {
 
@@ -16,7 +16,7 @@ public class JoinListener implements Listener {
 
 		Bukkit.broadcastMessage("§e" + e.getPlayer().getDisplayName() + " hat das Spiel betreten.");
 
-		for(Player target : Main.trollPlayers)
+		for(Player target : TrollMasterPlusPlus.trollPlayers)
 			e.getPlayer().hidePlayer(target);
 	}
 }
