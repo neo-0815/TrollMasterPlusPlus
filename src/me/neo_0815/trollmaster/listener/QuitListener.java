@@ -1,4 +1,4 @@
-package tmpp.listener;
+package me.neo_0815.trollmaster.listener;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;

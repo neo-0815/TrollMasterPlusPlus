@@ -1,4 +1,4 @@
-package tmpp;
+package me.neo_0815.trollmaster;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,14 +12,14 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import tmpp.cmds.CMDtrolljoin;
-import tmpp.cmds.CMDtrollleave;
-import tmpp.cmds.CMDtrollmode;
-import tmpp.cmds.CMDtrollmodeoff;
-import tmpp.cmds.CMDtrollspawn;
-import tmpp.listener.DeathListener;
-import tmpp.listener.JoinListener;
-import tmpp.listener.QuitListener;
+import me.neo_0815.trollmaster.commands.CMDtrolljoin;
+import me.neo_0815.trollmaster.commands.CMDtrollleave;
+import me.neo_0815.trollmaster.commands.CMDtrollmode;
+import me.neo_0815.trollmaster.commands.CMDtrollmodeoff;
+import me.neo_0815.trollmaster.commands.CMDtrollspawn;
+import me.neo_0815.trollmaster.listener.DeathListener;
+import me.neo_0815.trollmaster.listener.JoinListener;
+import me.neo_0815.trollmaster.listener.QuitListener;
 
 public class TrollMasterPlusPlus extends JavaPlugin {
 

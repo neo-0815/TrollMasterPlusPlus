@@ -1,4 +1,4 @@
-package tmpp.cmds;
+package me.neo_0815.trollmaster.commands;
 
 import java.util.Collection;
 
@@ -8,7 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import tmpp.TrollMasterPlusPlus;
+import me.neo_0815.trollmaster.TrollMasterPlusPlus;
 
 public class CMDtrollmodeoff implements CommandExecutor {
 
@@ -16,8 +16,8 @@ public class CMDtrollmodeoff implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
 		if(cmd.getName().equalsIgnoreCase("trollmodeoff")) if(sender instanceof Player) {
-			Player p = (Player) sender;
-			if(!p.hasPermission("tmpp.trollmode")) {
+			final Player p = (Player) sender;
+			if(!p.hasPermission("trollmaster.trollmode")) {
 				p.sendMessage(TrollMasterPlusPlus.noperm);
 
 				return true;
@@ -25,9 +25,9 @@ public class CMDtrollmodeoff implements CommandExecutor {
 			else {
 				p.sendMessage(TrollMasterPlusPlus.pr + "§7Trollmode deaktiviert.");
 
-				Collection<? extends Player> targets = Bukkit.getServer().getOnlinePlayers();
+				final Collection<? extends Player> targets = Bukkit.getServer().getOnlinePlayers();
 
-				for(Player targetPlayer : targets)
+				for(final Player targetPlayer : targets)
 					targetPlayer.showPlayer(p);
 
 				TrollMasterPlusPlus.loadInv(p);
