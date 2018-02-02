@@ -1,10 +1,8 @@
 name: TrollMasterPlusPlus
 version: 1.0
-main: tmpp.Main
+main: me.neo_0815.trollmaster.TrollMasterPlusPlus
 description: Ein TrollPlugin
 author: neo_0815
-authors: [oktobertim]
-website: https://www.youtube.com/channel/UCnlyYB0LbNC5G6XBw-8xP1g
 
 commands:
      trollmode:
