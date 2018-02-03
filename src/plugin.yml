@@ -20,7 +20,7 @@ commands:
      trolljoin:
           description: Spawnt das angegebene Entity.
           usage: /trolljoin <Name>
-          aliases: [tj ,tmjion ,tmj]
+          aliases: [tj ,tmjoin ,tmj]
      trollleave:
           description: Spawnt das angegebene Entity.
           usage: /trollleave <Name>
